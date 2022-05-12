@@ -12,30 +12,14 @@ void readMatrix(FILE *inputFilePtr, int *matrix, int rows, int cols) {
 	}
 }
 
-void writeMatrix(FILE *outputFilePtr, int *matrix, int rows, int cols) {
-	for(int i=0; i<rows; i++) {
-		for(int j=0; j<cols; j++) {
-			fprintf(outputFilePtr, "%d ", matrix[i*cols+j]);
+void writeMatrix(FILE *outputFilePtr, int *matrix, int ksize, int isize) {
+	
+		for(int j=0; j<isize; j++) {
+			fprintf(outputFilePtr, "%d\n", matrix[ksize-1 +j]);
 		}
 		fprintf(outputFilePtr, "\n");
-	}
 }
-/*
-void fir(int *in, int *w, int *Acc, int *out, int ISIZE, int WSIZE) {
-	
-    for (int i = 0; i < ISIZE+WSIZE-1; ++i)              // Give WSIZE-1 zeros at the end of input data
-    {
-		Acc[0] = in[i]*w[0];
-        for (int j = WSIZE - 2; j >0; --j)          // 
-        {
-			Acc[j] = in[i]*w[j] + Acc[j-1];
-		}
-		if (i>=WSIZE-1){
-			out[i-WSIZE+1] = Acc[WSIZE-2]+ in[i]*w[WSIZE-1];    // Size of output: ISIZE
-		}
-	}
-}
-*/
+
 void fir(int *in, int *w, int *Acc, int *out, int ISIZE, int WSIZE) {
 	
     for (int i = 0; i < ISIZE+WSIZE-1; ++i)              // Give WSIZE-1 zeros at the end of input data
@@ -45,7 +29,7 @@ void fir(int *in, int *w, int *Acc, int *out, int ISIZE, int WSIZE) {
 			Acc[j] = in[i]*w[j] + Acc[j-1];
 		}
 		Acc[0] = in[i]*w[0];
-		out[i] = Acc[WSIZE-1];
+		out[i] = Acc[WSIZE-1]>>8;
 	}
 }
 
@@ -57,13 +41,13 @@ int main(){
     // FILE POINTERS
     FILE *imageFilePtr, *kernelFilePtr, *outputFilePtr;
     
-    imageFilePtr = fopen("1Dinput.txt", "r");
+    imageFilePtr = fopen("1Dinput.dat", "r");
 	if(imageFilePtr == NULL) {
 	    printf("Failed to open the image file.!!\n"); 
 		return 0;
 	}
 
-    kernelFilePtr = fopen("1DKernel.txt", "r");
+    kernelFilePtr = fopen("1DKernel.dat", "r");
 	if(kernelFilePtr == NULL) {
 	    printf("Failed to open the kernel file.!!\n"); 
 		return 0;
@@ -94,12 +78,12 @@ int main(){
     // print the time taken by the compute function
 	seconds = t2.tv_sec - t1.tv_sec;
 	microSeconds = t2.tv_usec - t1.tv_usec;
-	printf("Time taken (ms): %.3f\n", 1000*seconds + microSeconds/1000);
+	printf("Time taken (ms): %f\n", 1000*seconds + microSeconds/1000);
 
 
     // Write output
-    outputFilePtr = fopen("1Doutput.txt", "w");
-	writeMatrix(outputFilePtr, conv, 1, ISIZE + KSIZE -1);
+    outputFilePtr = fopen("1Doutputgolden.dat", "w");
+	writeMatrix(outputFilePtr, conv, KSIZE, ISIZE);
 
     // close files
     fclose(imageFilePtr);
