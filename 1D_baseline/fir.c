@@ -29,7 +29,7 @@ void fir(int *in, int *w, int *Acc, int *out, int ISIZE, int WSIZE) {
 			Acc[j] = in[i]*w[j] + Acc[j-1];
 		}
 		Acc[0] = in[i]*w[0];
-		out[i] = Acc[WSIZE-1]>>8;
+		out[i] = Acc[WSIZE-1];
 	}
 }
 
