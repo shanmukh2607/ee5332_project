@@ -15,7 +15,7 @@ void readMatrix(FILE *inputFilePtr, int *matrix, int rows, int cols) {
 void writeMatrix(FILE *outputFilePtr, int *matrix, int ksize, int isize) {
 	
 		for(int j=0; j<isize; j++) {
-			fprintf(outputFilePtr, "%d\n", matrix[ksize-1 +j]);
+			fprintf(outputFilePtr, "%d ", matrix[ksize-1 +j]);
 		}
 		fprintf(outputFilePtr, "\n");
 }
