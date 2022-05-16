@@ -1,5 +1,5 @@
 //////// Four Times Unroll FIR Filter - 16 Tap
-//// The weights of the filter are assigned in the lines to 
+//// The weights of the filter are assigned in the lines 131 to 134
 //// Any other weights can be given here.
 //// 
 
@@ -49,6 +49,7 @@ module IPU(
     endcase
   end
 endmodule
+// End of IPU Module
 
 
 // Inner Product Cells
@@ -110,7 +111,7 @@ module fir4x(
 	input clk,
 	input reset
 );
-	// Register Unit
+	// Register Unit Regs
 	
     reg signed [31:0] x4k4,x4k5,x4k6;
 	wire signed [31:0] x4k4_wire,x4k5_wire,x4k6_wire;
@@ -120,6 +121,7 @@ module fir4x(
     wire signed [31:0] h4_wire,h5_wire,h6_wire,h7_wire;
     wire signed [31:0] h8_wire,h9_wire,h10_wire,h11_wire;
     wire signed [31:0] h12_wire,h13_wire,h14_wire,h15_wire;
+  	// IPU Outputs Defining
 	wire signed [31:0] out0000,out0010,out0001,out0011;
 	wire signed [31:0] out0100,out0110,out0101,out0111;
 	wire signed [31:0] out1000,out1010,out1001,out1011;
@@ -130,9 +132,11 @@ module fir4x(
     assign h4_wire = 130; assign h5_wire = 181; assign h6_wire = 226; assign h7_wire = 252;
     assign h8_wire = 252; assign h9_wire = 226; assign h10_wire = 181; assign h11_wire = 130;
     assign h12_wire = 83; assign h13_wire = 48; assign h14_wire = 24; assign h15_wire = 11;
+  
 	assign x4k4_wire = x4k4;
 	assign x4k5_wire = x4k5;
 	assign x4k6_wire = x4k6;
+  	// Storing Values in Register Unit
 	always @(posedge clk) begin
       case(reset)
         1'b1:begin
