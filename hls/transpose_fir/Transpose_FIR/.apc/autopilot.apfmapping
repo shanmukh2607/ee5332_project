@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="fir.cpp" path="C:\Users\bsksh\Documents\Vitis\transpose_fir\fir.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="1Dinput.dat" path="C:\Users\bsksh\Documents\Vitis\transpose_fir\1Dinput.dat"/>
+    <originFiles name="1Dkernel.dat" path="C:\Users\bsksh\Documents\Vitis\transpose_fir\1Dkernel.dat"/>
+    <originFiles name="1Doutputgolden.dat" path="C:\Users\bsksh\Documents\Vitis\transpose_fir\1Doutputgolden.dat"/>
+    <originFiles name="fir_test.cpp" path="C:\Users\bsksh\Documents\Vitis\transpose_fir\fir_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

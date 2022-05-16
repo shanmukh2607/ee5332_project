@@ -1,0 +1,10 @@
+<VitisHLS:BurstInfo>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="UnknownUnderlyingObjectMissed" src_info="demo.cpp:19:8" msg_id="214-117" msg_severity="INFO" msg_body="Cannot find or modify the underlying object pointed by 1" ID="bb2.store.1" VarName="1"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="UnknownUnderlyingObjectMissed" src_info="demo.cpp:16:17" msg_id="214-117" msg_severity="INFO" msg_body="Cannot find or modify the underlying object pointed by getelementptr" ID="bb1.load.6" VarName="_ZZ3firPiiE9shift_reg"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="UnknownUnderlyingObjectMissed" src_info="demo.cpp:16:15" msg_id="214-117" msg_severity="INFO" msg_body="Cannot find or modify the underlying object pointed by getelementptr" ID="bb1.store.8" VarName="_ZZ3firPiiE9shift_reg"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="UnknownUnderlyingObjectMissed" src_info="demo.cpp:17:31" msg_id="214-117" msg_severity="INFO" msg_body="Cannot find or modify the underlying object pointed by getelementptr" ID="bb1.load.10" VarName="_ZZ3firPiiE1c"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="UnknownUnderlyingObjectMissed" src_info="demo.cpp:16:17" msg_id="214-117" msg_severity="INFO" msg_body="Cannot find or modify the underlying object pointed by getelementptr" ID="bb1.load.6" VarName="_ZZ3firPiiE9shift_reg"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="UnknownUnderlyingObjectMissed" src_info="demo.cpp:16:15" msg_id="214-117" msg_severity="INFO" msg_body="Cannot find or modify the underlying object pointed by getelementptr" ID="bb1.store.8" VarName="_ZZ3firPiiE9shift_reg"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="UnknownUnderlyingObjectMissed" src_info="demo.cpp:17:31" msg_id="214-117" msg_severity="INFO" msg_body="Cannot find or modify the underlying object pointed by getelementptr" ID="bb1.load.10" VarName="_ZZ3firPiiE1c"/>
+</VitisHLS:BurstInfo>
+

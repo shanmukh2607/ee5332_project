@@ -1,0 +1,365 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'bsksh' on host 'desktop-fdtsdm6' (Windows NT_amd64 version 6.2) on Mon May 16 19:15:31 +0530 2022
+INFO: [HLS 200-10] In directory 'C:/Users/bsksh/Documents/Vitis/transpose_fir'
+Sourcing Tcl script 'C:/Users/bsksh/Documents/Vitis/transpose_fir/Transpose_FIR/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: open_project Transpose_FIR 
+INFO: [HLS 200-10] Opening project 'C:/Users/bsksh/Documents/Vitis/transpose_fir/Transpose_FIR'.
+INFO: [HLS 200-1510] Running: set_top fir 
+INFO: [HLS 200-1510] Running: add_files fir.cpp 
+INFO: [HLS 200-10] Adding design file 'fir.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb 1Dinput.dat -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file '1Dinput.dat' to the project
+INFO: [HLS 200-1510] Running: add_files -tb 1Dkernel.dat -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file '1Dkernel.dat' to the project
+INFO: [HLS 200-1510] Running: add_files -tb 1Doutputgolden.dat -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file '1Doutputgolden.dat' to the project
+INFO: [HLS 200-1510] Running: add_files -tb fir_test.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'fir_test.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/Users/bsksh/Documents/Vitis/transpose_fir/Transpose_FIR/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a35t-cpg236-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7a35t-cpg236-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: set_directive_top -name fir fir 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.321 seconds; current allocated memory: 97.587 MB.
+INFO: [HLS 200-10] Analyzing design file 'fir.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 7.063 seconds; current allocated memory: 99.024 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-186] Unrolling loop 'broadcast_loop' (fir.cpp:22:3) in function 'fir' completely with a factor of 15 (fir.cpp:22:3)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:22)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:10)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:22)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:10)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:22)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:10)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:22)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:10)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:22)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:10)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:22)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:10)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:22)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:10)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:22)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:10)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:22)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:10)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:22)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:10)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:22)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:10)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:22)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:10)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:22)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:10)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:22)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:10)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:22)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:26:10)
+WARNING: [HLS 214-167] The program may have out of bound array access (fir.cpp:28:11)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 6.236 seconds; current allocated memory: 100.497 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 100.498 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.136 seconds; current allocated memory: 101.461 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.204 seconds; current allocated memory: 100.871 MB.
+INFO: [XFORM 203-101] Partitioning array 'Acc1'  in dimension 1 completely.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.53 seconds; current allocated memory: 121.006 MB.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.4'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.2'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.8'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.11'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.3'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.7'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.0'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.6'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.13'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.15'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.12'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.10'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.1'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.5'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.14'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.9'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.4'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.2'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.8'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.11'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.3'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.7'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.0'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.6'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.13'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.15'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.12'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.10'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.1'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.5'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.14'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.9'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.4'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.2'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.8'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.11'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.3'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.7'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.0'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.6'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.13'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.15'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.12'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.10'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.1'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.5'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.14'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.9'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.4'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.2'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.8'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.11'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.3'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.7'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.0'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.6'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.13'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.15'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.12'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.10'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.1'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.5'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.14'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.9'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.4'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.2'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.8'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.11'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.3'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.7'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.0'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.6'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.13'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.15'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.12'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.10'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.1'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.5'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.14'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.9'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.4'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.2'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.8'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.11'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.3'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.7'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.0'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.6'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.13'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.15'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.12'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.10'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.1'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.5'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.14'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.9'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.4'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.2'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.8'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.11'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.3'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.7'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.0'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.6'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.13'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.15'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.12'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.10'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.1'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.5'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.14'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.9'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.4'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.2'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.8'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.11'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.3'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.7'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.0'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.6'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.13'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.15'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.12'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.10'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.1'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.5'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.14'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.9'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.4'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.2'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.8'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.11'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.3'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.7'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.0'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.6'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.13'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.15'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.12'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.10'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.1'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.5'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.14'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.9'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.4'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.2'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.8'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.11'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.3'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.7'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.0'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.6'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.13'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.15'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.12'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.10'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.1'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.5'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.14'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.9'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.4'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.2'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.8'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.11'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.3'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.7'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.0'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.6'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.13'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.15'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.12'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.10'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.1'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.5'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.14'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.9'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.4'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.2'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.8'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.11'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.3'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.7'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.0'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.6'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.13'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.15'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.12'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.10'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.1'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.5'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.14'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.9'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.4'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.2'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.8'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.11'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.3'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.7'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.0'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.6'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.13'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.15'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.12'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.10'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.1'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.5'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.14'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.9'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.4'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.2'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.8'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.11'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.3'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.7'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.0'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.6'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.13'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.15'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.12'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.10'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.1'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.5'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.14'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.9'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.4'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.2'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.8'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.11'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.3'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.7'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.0'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.6'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.13'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.15'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.12'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.10'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.1'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.5'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.14'.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'Acc1.9'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 2.911 seconds; current allocated memory: 112.937 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir' ...
+WARNING: [SYN 201-107] Renaming port name 'fir/in' to 'fir/in_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'fir/out' to 'fir/out_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'fir'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, function 'fir'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.511 seconds; current allocated memory: 113.262 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.369 seconds; current allocated memory: 113.504 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/in_r' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir/out_r' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'Acc1_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'Acc1_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'Acc1_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'Acc1_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'Acc1_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'Acc1_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'Acc1_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'Acc1_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'Acc1_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'Acc1_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'Acc1_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'Acc1_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'Acc1_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'Acc1_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'Acc1_0' is power-on initialization.
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_5ns_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_8ns_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_9ns_32_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.347 seconds; current allocated memory: 114.041 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'fir_mul_32s_5ns_32_2_1_Multiplier_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'fir_mul_32s_8ns_32_2_1_Multiplier_1'
+INFO: [RTMG 210-282] Generating pipelined core: 'fir_mul_32s_9ns_32_2_1_Multiplier_2'
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 4 seconds. CPU system time: 2 seconds. Elapsed time: 7.12 seconds; current allocated memory: 121.056 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for fir.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir.
+INFO: [HLS 200-789] **** Estimated Fmax: 145.77 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 10 seconds. CPU system time: 4 seconds. Elapsed time: 27.19 seconds; current allocated memory: 121.253 MB.
+INFO: [HLS 200-112] Total CPU user time: 14 seconds. Total CPU system time: 6 seconds. Total elapsed time: 36.117 seconds; peak allocated memory: 121.056 MB.

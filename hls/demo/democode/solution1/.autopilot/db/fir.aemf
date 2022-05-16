@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1652702324783">
+  <ports id="1" name="y" type="PortType" originalName="y" coreId="87866904" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="2" name="x" type="PortType" originalName="x" coreId="1" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <edges id="41" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="42" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="45" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="46" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="47" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="50" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="51" source_obj="//@blocks.2/@node_objs.9" sink_obj="//@blocks.1/@node_objs.1" is_back_edge="1"/>
+  <edges id="52" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.1" is_back_edge="1"/>
+  <edges id="53" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="54" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="55" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="56" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="59" source_obj="//@blocks.1/@node_objs.3" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="60" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="61" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="62" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="64" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="65" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="68" source_obj="//@blocks.2/@node_objs.1" sink_obj="//@blocks.2/@node_objs.2"/>
+  <edges id="69" source_obj="//@blocks.2/@node_objs.2" sink_obj="//@blocks.2/@node_objs.3"/>
+  <edges id="70" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="72" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.2/@node_objs.4"/>
+  <edges id="73" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.5"/>
+  <edges id="74" source_obj="//@blocks.2/@node_objs.4" sink_obj="//@blocks.2/@node_objs.5"/>
+  <edges id="75" sink_obj="//@blocks.2/@node_objs.6"/>
+  <edges id="77" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.2/@node_objs.6"/>
+  <edges id="78" source_obj="//@blocks.2/@node_objs.6" sink_obj="//@blocks.2/@node_objs.7"/>
+  <edges id="79" source_obj="//@blocks.2/@node_objs.7" sink_obj="//@blocks.2/@node_objs.8"/>
+  <edges id="80" source_obj="//@blocks.2/@node_objs.3" sink_obj="//@blocks.2/@node_objs.8"/>
+  <edges id="81" source_obj="//@blocks.2/@node_objs.8" sink_obj="//@blocks.2/@node_objs.9"/>
+  <edges id="82" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.2/@node_objs.9"/>
+  <edges id="83" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2/@node_objs.10"/>
+  <edges id="86" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@ports.0"/>
+  <edges id="87" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="149" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="150" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.3"/>
+  <edges id="151" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="152" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1" is_back_edge="1"/>
+  <blocks id="15" name="block_15" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_22</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="x_read" lineNumber="6" originalName="x" fileName="demo.cpp" fileDirectory=".." coreId="10" contextFuncName="fir" bitwidth="32" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="demo.cpp" linenumber="6" fileDirectory="C:\Users\bsksh\Documents\Vitis\demo" functionName="fir"/>
+      <dataInputObjs>x</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="acc" lineNumber="12" originalName="acc" fileName="demo.cpp" fileDirectory=".." rtlName="mul_32s_5ns_32_3_1_U1" opType="mul" coreId="62590320" contextFuncName="fir" bitwidth="32" opcode="mul" nodeLatency="2" m_display="0" m_delay="5.69" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="demo.cpp" linenumber="12" fileDirectory="C:\Users\bsksh\Documents\Vitis\demo" functionName="fir"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="br_ln14" lineNumber="14" fileName="demo.cpp" fileDirectory=".." coreId="106744272" contextFuncName="fir" opcode="br" nodeLabel="3.0" m_display="0" m_delay="1.61" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="demo.cpp" linenumber="14" fileDirectory="C:\Users\bsksh\Documents\Vitis\demo" functionName="fir"/>
+      <controlInputObjs>block_22</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="demo.cpp">
+      <validLinenumbers>6</validLinenumbers>
+      <validLinenumbers>12</validLinenumbers>
+      <validLinenumbers>14</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="22" name="block_22" type="BlockType">
+    <controlInputObjs>block_15</controlInputObjs>
+    <controlInputObjs>.split</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_38</controlOutputObjs>
+    <controlOutputObjs>.split</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="i" lineNumber="14" originalName="i" fileName="demo.cpp" fileDirectory=".." coreId="0" contextFuncName="fir" bitwidth="4" opcode="phi" nodeLabel="4.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="demo.cpp" linenumber="14" fileDirectory="C:\Users\bsksh\Documents\Vitis\demo" functionName="fir"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <controlInputObjs>.split</controlInputObjs>
+      <controlInputObjs>block_15</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="acc_1" originalName="acc" coreId="0" bitwidth="32" opcode="phi" nodeLabel="4.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+      <controlInputObjs>.split</controlInputObjs>
+      <controlInputObjs>block_15</controlInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="zext_ln14" lineNumber="14" fileName="demo.cpp" fileDirectory=".." rtlName="zext_ln14_fu_118_p1" coreId="0" contextFuncName="fir" bitwidth="64" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="demo.cpp" linenumber="14" fileDirectory="C:\Users\bsksh\Documents\Vitis\demo" functionName="fir"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="icmp_ln14" lineNumber="14" fileName="demo.cpp" fileDirectory=".." rtlName="icmp_ln14_fu_123_p2" opType="icmp" coreId="0" contextFuncName="fir" bitwidth="1" opcode="icmp" nodeLabel="4.0" m_display="0" m_delay="1.44" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="demo.cpp" linenumber="14" fileDirectory="C:\Users\bsksh\Documents\Vitis\demo" functionName="fir"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="br_ln14" lineNumber="14" fileName="demo.cpp" fileDirectory=".." coreId="33957040" contextFuncName="fir" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="demo.cpp" linenumber="14" fileDirectory="C:\Users\bsksh\Documents\Vitis\demo" functionName="fir"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>.split</controlInputObjs>
+      <controlInputObjs>block_38</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="demo.cpp">
+      <validLinenumbers>14</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="35" name=".split" type="BlockType">
+    <controlInputObjs>block_22</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_22</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="add_ln14" lineNumber="14" fileName="demo.cpp" fileDirectory=".." rtlName="add_ln14_fu_129_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="fir" bitwidth="4" opcode="add" nodeLabel="4.0" m_display="0" m_delay="1.77" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="demo.cpp" linenumber="14" fileDirectory="C:\Users\bsksh\Documents\Vitis\demo" functionName="fir"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <dataOutputObjs>zext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="zext_ln16" lineNumber="16" fileName="demo.cpp" fileDirectory=".." rtlName="zext_ln16_fu_135_p1" coreId="0" contextFuncName="fir" bitwidth="64" opcode="zext" nodeLabel="4.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="demo.cpp" linenumber="16" fileDirectory="C:\Users\bsksh\Documents\Vitis\demo" functionName="fir"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="shift_reg_addr" lineNumber="16" fileName="demo.cpp" fileDirectory=".." coreId="33960720" contextFuncName="fir" bitwidth="4" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="demo.cpp" linenumber="16" fileDirectory="C:\Users\bsksh\Documents\Vitis\demo" functionName="fir"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="shift_reg_load" lineNumber="16" fileName="demo.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="82" contextFuncName="fir" bitwidth="32" opcode="load" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="demo.cpp" linenumber="16" fileDirectory="C:\Users\bsksh\Documents\Vitis\demo" functionName="fir"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="shift_reg_addr_1" lineNumber="16" fileName="demo.cpp" fileDirectory=".." coreId="64" contextFuncName="fir" bitwidth="4" opcode="getelementptr" nodeLabel="5.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="demo.cpp" linenumber="16" fileDirectory="C:\Users\bsksh\Documents\Vitis\demo" functionName="fir"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="shift_reg_addr_1_write_ln16" lineNumber="16" fileName="demo.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="82" contextFuncName="fir" opcode="store" nodeLabel="5.0" m_display="0" m_delay="2.15" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="demo.cpp" linenumber="16" fileDirectory="C:\Users\bsksh\Documents\Vitis\demo" functionName="fir"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>getelementptr</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="fir_int_int_c_addr" lineNumber="17" fileName="demo.cpp" fileDirectory=".." coreId="16" contextFuncName="fir" bitwidth="4" opcode="getelementptr" nodeLabel="4.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="demo.cpp" linenumber="17" fileDirectory="C:\Users\bsksh\Documents\Vitis\demo" functionName="fir"/>
+      <dataInputObjs>zext</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="fir_int_int_c_load" lineNumber="17" fileName="demo.cpp" fileDirectory=".." coreName="ROM" implIndex="auto" control="auto" opType="rom" coreId="95" contextFuncName="fir" bitwidth="32" opcode="load" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="2.15" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="demo.cpp" linenumber="17" fileDirectory="C:\Users\bsksh\Documents\Vitis\demo" functionName="fir"/>
+      <dataInputObjs>getelementptr</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="mul_ln17" lineNumber="17" fileName="demo.cpp" fileDirectory=".." rtlName="mul_10s_32s_32_3_1_U2" opType="mul" coreId="99959041" contextFuncName="fir" bitwidth="32" opcode="mul" nodeLabel="6.0" nodeLatency="2" m_display="0" m_delay="5.69" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="demo.cpp" linenumber="17" fileDirectory="C:\Users\bsksh\Documents\Vitis\demo" functionName="fir"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="acc_2" lineNumber="17" originalName="acc" fileName="demo.cpp" fileDirectory=".." rtlName="acc_2_fu_144_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="fir" bitwidth="32" opcode="add" nodeLabel="9.0" m_display="0" m_delay="2.7" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="demo.cpp" linenumber="17" fileDirectory="C:\Users\bsksh\Documents\Vitis\demo" functionName="fir"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="br_ln0" coreId="0" opcode="br" nodeLabel="9.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <controlInputObjs>block_22</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="demo.cpp">
+      <validLinenumbers>14</validLinenumbers>
+      <validLinenumbers>16</validLinenumbers>
+      <validLinenumbers>17</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="38" name="block_38" type="BlockType">
+    <controlInputObjs>block_22</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="y_write_ln19" lineNumber="19" fileName="demo.cpp" fileDirectory=".." coreId="3352162029" contextFuncName="fir" opcode="write" nodeLabel="4.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="demo.cpp" linenumber="19" fileDirectory="C:\Users\bsksh\Documents\Vitis\demo" functionName="fir"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>y</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="_ln20" lineNumber="20" fileName="demo.cpp" fileDirectory=".." coreId="106001936" contextFuncName="fir" opcode="ret" nodeLabel="4.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="demo.cpp" linenumber="20" fileDirectory="C:\Users\bsksh\Documents\Vitis\demo" functionName="fir"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="demo.cpp">
+      <validLinenumbers>19</validLinenumbers>
+      <validLinenumbers>20</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <regnodes realName="mul_ln17_reg_192">
+    <nodeIds>32</nodeIds>
+  </regnodes>
+  <regnodes realName="acc_1_reg_101">
+    <nodeIds>17</nodeIds>
+  </regnodes>
+  <regnodes realName="fir_int_int_c_addr_reg_177">
+    <nodeIds>30</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln14_reg_159">
+    <nodeIds>18</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln14_reg_167">
+    <nodeIds>23</nodeIds>
+  </regnodes>
+  <regnodes realName="acc_2_reg_197">
+    <nodeIds>33</nodeIds>
+  </regnodes>
+  <regnodes realName="fir_int_int_c_load_reg_187">
+    <nodeIds>31</nodeIds>
+  </regnodes>
+  <regnodes realName="acc_reg_154">
+    <nodeIds>13</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_90">
+    <nodeIds>16</nodeIds>
+  </regnodes>
+  <regnodes realName="x_read_reg_149">
+    <nodeIds>12</nodeIds>
+  </regnodes>
+  <regnodes realName="shift_reg_addr_reg_172">
+    <nodeIds>26</nodeIds>
+  </regnodes>
+  <regnodes realName="shift_reg_load_reg_182">
+    <nodeIds>27</nodeIds>
+  </regnodes>
+  <expressionNodes realName="i_phi_fu_94">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shift_reg_addr_1_gep_fu_81">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shift_reg_addr_gep_fu_55">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln16_fu_135">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="acc_1_phi_fu_104">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln14_fu_129">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="fir_int_int_c_addr_gep_fu_68">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln14_fu_118">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln14_fu_123">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="acc_2_fu_144">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fu_140">
+    <nodeIds>32</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_112">
+    <nodeIds>13</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="x_read_read_fu_42">
+    <nodeIds>12</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln19_write_fu_48">
+    <nodeIds>36</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="fir_int_int_c">
+    <nodeIds>31</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="shift_reg">
+    <nodeIds>27</nodeIds>
+    <nodeIds>29</nodeIds>
+  </memoryPorts>
+  <ioPorts name="x">
+    <contents name="read">
+      <nodeIds>12</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="y">
+    <contents name="write">
+      <nodeIds>36</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="3" latency="3"/>
+    </states>
+    <states id="2">
+      <operations id="13" stage="2" latency="3"/>
+    </states>
+    <states id="3">
+      <operations id="13" stage="1" latency="3"/>
+    </states>
+    <states id="4">
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+    </states>
+    <states id="5">
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="2" latency="2"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="2" latency="2"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+    </states>
+    <states id="6">
+      <operations id="27" stage="1" latency="2"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="32" stage="3" latency="3"/>
+    </states>
+    <states id="8">
+      <operations id="32" stage="2" latency="3"/>
+    </states>
+    <states id="9">
+      <operations id="32" stage="1" latency="3"/>
+    </states>
+    <states id="10">
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="5">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="fir" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="94" mMaxLatency="94">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="3" mMaxLatency="3">
+      <basicBlocks>15</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="shift_accum_loop" mII="-1" mDepth="-1" mMinTripCount="15" mMaxTripCount="15" mMinLatency="90" mMaxLatency="90" mType="1">
+      <basicBlocks>22</basicBlocks>
+      <basicBlocks>35</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>38</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

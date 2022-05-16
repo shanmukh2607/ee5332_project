@@ -1,0 +1,202 @@
+
+
+================================================================
+== Vitis HLS Report for 'fir'
+================================================================
+* Date:           Mon May 16 19:15:57 2022
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:45 MST 2020)
+* Project:        Transpose_FIR
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.860 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        2|        2|  20.000 ns|  20.000 ns|    1|    1|      yes|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 6.86>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%in_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %in_r" [fir.cpp:10]   --->   Operation 4 'read' 'in_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [2/2] (6.86ns)   --->   "%mul_ln26 = mul i32 %in_read, i32 11" [fir.cpp:26]   --->   Operation 5 'mul' 'mul_ln26' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 6 [2/2] (6.86ns)   --->   "%mul_ln26_1 = mul i32 %in_read, i32 83" [fir.cpp:26]   --->   Operation 6 'mul' 'mul_ln26_1' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 7 [2/2] (6.86ns)   --->   "%mul_ln26_2 = mul i32 %in_read, i32 181" [fir.cpp:26]   --->   Operation 7 'mul' 'mul_ln26_2' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 8 [2/2] (6.86ns)   --->   "%mul_ln26_3 = mul i32 %in_read, i32 226" [fir.cpp:26]   --->   Operation 8 'mul' 'mul_ln26_3' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 6.86>
+ST_2 : Operation 9 [1/2] (6.86ns)   --->   "%mul_ln26 = mul i32 %in_read, i32 11" [fir.cpp:26]   --->   Operation 9 'mul' 'mul_ln26' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 10 [1/2] (6.86ns)   --->   "%mul_ln26_1 = mul i32 %in_read, i32 83" [fir.cpp:26]   --->   Operation 10 'mul' 'mul_ln26_1' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 11 [1/2] (6.86ns)   --->   "%mul_ln26_2 = mul i32 %in_read, i32 181" [fir.cpp:26]   --->   Operation 11 'mul' 'mul_ln26_2' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 12 [1/2] (6.86ns)   --->   "%mul_ln26_3 = mul i32 %in_read, i32 226" [fir.cpp:26]   --->   Operation 12 'mul' 'mul_ln26_3' <Predicate = true> <Delay = 6.86> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.86> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 5.40>
+ST_3 : Operation 13 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_0"   --->   Operation 13 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 14 [1/1] (0.00ns)   --->   "%spectopmodule_ln0 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1"   --->   Operation 14 'spectopmodule' 'spectopmodule_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 15 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %in_r"   --->   Operation 15 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %in_r, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %out_r"   --->   Operation 17 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %out_r, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%Acc1_14_load = load i32 %Acc1_14" [fir.cpp:26]   --->   Operation 19 'load' 'Acc1_14_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 20 [1/1] (2.70ns)   --->   "%add_ln26 = add i32 %Acc1_14_load, i32 %mul_ln26" [fir.cpp:26]   --->   Operation 20 'add' 'add_ln26' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%store_ln26 = store i32 %add_ln26, i32 %Acc1_15" [fir.cpp:26]   --->   Operation 21 'store' 'store_ln26' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (0.00ns) (grouped into LUT with out node sub_ln26)   --->   "%shl_ln26 = shl i32 %in_read, i32 5" [fir.cpp:26]   --->   Operation 22 'shl' 'shl_ln26' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.00ns) (grouped into LUT with out node sub_ln26)   --->   "%shl_ln26_1 = shl i32 %in_read, i32 3" [fir.cpp:26]   --->   Operation 23 'shl' 'shl_ln26_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (2.70ns) (out node of the LUT)   --->   "%sub_ln26 = sub i32 %shl_ln26, i32 %shl_ln26_1" [fir.cpp:26]   --->   Operation 24 'sub' 'sub_ln26' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%Acc1_13_load = load i32 %Acc1_13" [fir.cpp:26]   --->   Operation 25 'load' 'Acc1_13_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (2.70ns)   --->   "%add_ln26_1 = add i32 %Acc1_13_load, i32 %sub_ln26" [fir.cpp:26]   --->   Operation 26 'add' 'add_ln26_1' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%store_ln26 = store i32 %add_ln26_1, i32 %Acc1_14" [fir.cpp:26]   --->   Operation 27 'store' 'store_ln26' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (0.00ns) (grouped into LUT with out node sub_ln26_1)   --->   "%shl_ln26_2 = shl i32 %in_read, i32 6" [fir.cpp:26]   --->   Operation 28 'shl' 'shl_ln26_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (0.00ns) (grouped into LUT with out node sub_ln26_1)   --->   "%shl_ln26_3 = shl i32 %in_read, i32 4" [fir.cpp:26]   --->   Operation 29 'shl' 'shl_ln26_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (2.70ns) (out node of the LUT)   --->   "%sub_ln26_1 = sub i32 %shl_ln26_2, i32 %shl_ln26_3" [fir.cpp:26]   --->   Operation 30 'sub' 'sub_ln26_1' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%Acc1_12_load = load i32 %Acc1_12" [fir.cpp:26]   --->   Operation 31 'load' 'Acc1_12_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 32 [1/1] (2.70ns)   --->   "%add_ln26_2 = add i32 %Acc1_12_load, i32 %sub_ln26_1" [fir.cpp:26]   --->   Operation 32 'add' 'add_ln26_2' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%store_ln26 = store i32 %add_ln26_2, i32 %Acc1_13" [fir.cpp:26]   --->   Operation 33 'store' 'store_ln26' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%Acc1_11_load = load i32 %Acc1_11" [fir.cpp:26]   --->   Operation 34 'load' 'Acc1_11_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (2.70ns)   --->   "%add_ln26_3 = add i32 %Acc1_11_load, i32 %mul_ln26_1" [fir.cpp:26]   --->   Operation 35 'add' 'add_ln26_3' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%store_ln26 = store i32 %add_ln26_3, i32 %Acc1_12" [fir.cpp:26]   --->   Operation 36 'store' 'store_ln26' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (0.00ns) (grouped into LUT with out node add_ln26_15)   --->   "%shl_ln26_4 = shl i32 %in_read, i32 7" [fir.cpp:26]   --->   Operation 37 'shl' 'shl_ln26_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (0.00ns) (grouped into LUT with out node add_ln26_15)   --->   "%shl_ln26_5 = shl i32 %in_read, i32 1" [fir.cpp:26]   --->   Operation 38 'shl' 'shl_ln26_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (2.70ns) (out node of the LUT)   --->   "%add_ln26_15 = add i32 %shl_ln26_4, i32 %shl_ln26_5" [fir.cpp:26]   --->   Operation 39 'add' 'add_ln26_15' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%Acc1_10_load = load i32 %Acc1_10" [fir.cpp:26]   --->   Operation 40 'load' 'Acc1_10_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (2.70ns)   --->   "%add_ln26_4 = add i32 %Acc1_10_load, i32 %add_ln26_15" [fir.cpp:26]   --->   Operation 41 'add' 'add_ln26_4' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%store_ln26 = store i32 %add_ln26_4, i32 %Acc1_11" [fir.cpp:26]   --->   Operation 42 'store' 'store_ln26' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%Acc1_9_load = load i32 %Acc1_9" [fir.cpp:26]   --->   Operation 43 'load' 'Acc1_9_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (2.70ns)   --->   "%add_ln26_5 = add i32 %Acc1_9_load, i32 %mul_ln26_2" [fir.cpp:26]   --->   Operation 44 'add' 'add_ln26_5' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%store_ln26 = store i32 %add_ln26_5, i32 %Acc1_10" [fir.cpp:26]   --->   Operation 45 'store' 'store_ln26' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%Acc1_8_load = load i32 %Acc1_8" [fir.cpp:26]   --->   Operation 46 'load' 'Acc1_8_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (2.70ns)   --->   "%add_ln26_6 = add i32 %Acc1_8_load, i32 %mul_ln26_3" [fir.cpp:26]   --->   Operation 47 'add' 'add_ln26_6' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%store_ln26 = store i32 %add_ln26_6, i32 %Acc1_9" [fir.cpp:26]   --->   Operation 48 'store' 'store_ln26' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (0.00ns) (grouped into LUT with out node sub_ln26_2)   --->   "%shl_ln26_6 = shl i32 %in_read, i32 8" [fir.cpp:26]   --->   Operation 49 'shl' 'shl_ln26_6' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 50 [1/1] (0.00ns) (grouped into LUT with out node sub_ln26_2)   --->   "%shl_ln26_7 = shl i32 %in_read, i32 2" [fir.cpp:26]   --->   Operation 50 'shl' 'shl_ln26_7' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] (2.70ns) (out node of the LUT)   --->   "%sub_ln26_2 = sub i32 %shl_ln26_6, i32 %shl_ln26_7" [fir.cpp:26]   --->   Operation 51 'sub' 'sub_ln26_2' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%Acc1_7_load = load i32 %Acc1_7" [fir.cpp:26]   --->   Operation 52 'load' 'Acc1_7_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 53 [1/1] (2.70ns)   --->   "%add_ln26_7 = add i32 %Acc1_7_load, i32 %sub_ln26_2" [fir.cpp:26]   --->   Operation 53 'add' 'add_ln26_7' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%store_ln26 = store i32 %add_ln26_7, i32 %Acc1_8" [fir.cpp:26]   --->   Operation 54 'store' 'store_ln26' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%Acc1_6_load = load i32 %Acc1_6" [fir.cpp:26]   --->   Operation 55 'load' 'Acc1_6_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 56 [1/1] (2.70ns)   --->   "%add_ln26_8 = add i32 %Acc1_6_load, i32 %sub_ln26_2" [fir.cpp:26]   --->   Operation 56 'add' 'add_ln26_8' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 57 [1/1] (0.00ns)   --->   "%store_ln26 = store i32 %add_ln26_8, i32 %Acc1_7" [fir.cpp:26]   --->   Operation 57 'store' 'store_ln26' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 58 [1/1] (0.00ns)   --->   "%Acc1_5_load = load i32 %Acc1_5" [fir.cpp:26]   --->   Operation 58 'load' 'Acc1_5_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 59 [1/1] (2.70ns)   --->   "%add_ln26_9 = add i32 %Acc1_5_load, i32 %mul_ln26_3" [fir.cpp:26]   --->   Operation 59 'add' 'add_ln26_9' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "%store_ln26 = store i32 %add_ln26_9, i32 %Acc1_6" [fir.cpp:26]   --->   Operation 60 'store' 'store_ln26' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 61 [1/1] (0.00ns)   --->   "%Acc1_4_load = load i32 %Acc1_4" [fir.cpp:26]   --->   Operation 61 'load' 'Acc1_4_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 62 [1/1] (2.70ns)   --->   "%add_ln26_10 = add i32 %Acc1_4_load, i32 %mul_ln26_2" [fir.cpp:26]   --->   Operation 62 'add' 'add_ln26_10' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%store_ln26 = store i32 %add_ln26_10, i32 %Acc1_5" [fir.cpp:26]   --->   Operation 63 'store' 'store_ln26' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 64 [1/1] (0.00ns)   --->   "%Acc1_3_load = load i32 %Acc1_3" [fir.cpp:26]   --->   Operation 64 'load' 'Acc1_3_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 65 [1/1] (2.70ns)   --->   "%add_ln26_11 = add i32 %Acc1_3_load, i32 %add_ln26_15" [fir.cpp:26]   --->   Operation 65 'add' 'add_ln26_11' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 66 [1/1] (0.00ns)   --->   "%store_ln26 = store i32 %add_ln26_11, i32 %Acc1_4" [fir.cpp:26]   --->   Operation 66 'store' 'store_ln26' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 67 [1/1] (0.00ns)   --->   "%Acc1_2_load = load i32 %Acc1_2" [fir.cpp:26]   --->   Operation 67 'load' 'Acc1_2_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 68 [1/1] (2.70ns)   --->   "%add_ln26_12 = add i32 %Acc1_2_load, i32 %mul_ln26_1" [fir.cpp:26]   --->   Operation 68 'add' 'add_ln26_12' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 69 [1/1] (0.00ns)   --->   "%store_ln26 = store i32 %add_ln26_12, i32 %Acc1_3" [fir.cpp:26]   --->   Operation 69 'store' 'store_ln26' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 70 [1/1] (0.00ns)   --->   "%Acc1_1_load = load i32 %Acc1_1" [fir.cpp:26]   --->   Operation 70 'load' 'Acc1_1_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 71 [1/1] (2.70ns)   --->   "%add_ln26_13 = add i32 %Acc1_1_load, i32 %sub_ln26_1" [fir.cpp:26]   --->   Operation 71 'add' 'add_ln26_13' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 72 [1/1] (0.00ns)   --->   "%store_ln26 = store i32 %add_ln26_13, i32 %Acc1_2" [fir.cpp:26]   --->   Operation 72 'store' 'store_ln26' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%Acc1_0_load = load i32 %Acc1_0" [fir.cpp:26]   --->   Operation 73 'load' 'Acc1_0_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 74 [1/1] (2.70ns)   --->   "%add_ln26_14 = add i32 %Acc1_0_load, i32 %sub_ln26" [fir.cpp:26]   --->   Operation 74 'add' 'add_ln26_14' <Predicate = true> <Delay = 2.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 75 [1/1] (0.00ns)   --->   "%store_ln26 = store i32 %add_ln26_14, i32 %Acc1_1" [fir.cpp:26]   --->   Operation 75 'store' 'store_ln26' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 76 [1/1] (0.00ns)   --->   "%store_ln28 = store i32 %mul_ln26, i32 %Acc1_0" [fir.cpp:28]   --->   Operation 76 'store' 'store_ln28' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 77 [1/1] (0.00ns)   --->   "%write_ln29 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %out_r, i32 %add_ln26" [fir.cpp:29]   --->   Operation 77 'write' 'write_ln29' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 78 [1/1] (0.00ns)   --->   "%ret_ln30 = ret" [fir.cpp:30]   --->   Operation 78 'ret' 'ret_ln30' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 6.86ns
+The critical path consists of the following:
+	wire read on port 'in_r' (fir.cpp:10) [26]  (0 ns)
+	'mul' operation ('mul_ln26', fir.cpp:26) [27]  (6.86 ns)
+
+ <State 2>: 6.86ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln26', fir.cpp:26) [27]  (6.86 ns)
+
+ <State 3>: 5.4ns
+The critical path consists of the following:
+	'shl' operation ('shl_ln26', fir.cpp:26) [31]  (0 ns)
+	'sub' operation ('sub_ln26', fir.cpp:26) [33]  (2.7 ns)
+	'add' operation ('add_ln26_1', fir.cpp:26) [35]  (2.7 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

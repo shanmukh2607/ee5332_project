@@ -15,7 +15,7 @@ void readMatrix(FILE *inputFilePtr, int *matrix, int rows, int cols) {
 void writeMatrix(FILE *outputFilePtr, int *matrix, int ksize, int isize) {
 	
 		for(int j=0; j<isize; j++) {
-			fprintf(outputFilePtr, "%d ", matrix[ksize-1 +j]);
+			fprintf(outputFilePtr, "%d\n", matrix[ksize-1 +j]);
 		}
 		fprintf(outputFilePtr, "\n");
 }
@@ -47,7 +47,7 @@ int main(){
 		return 0;
 	}
 
-    kernelFilePtr = fopen("1DKernel.dat", "r");
+    kernelFilePtr = fopen("1Dkernel.dat", "r");
 	if(kernelFilePtr == NULL) {
 	    printf("Failed to open the kernel file.!!\n"); 
 		return 0;
@@ -71,7 +71,7 @@ int main(){
 
     gettimeofday(&t1, NULL);
     //================ Function call =====================//
-    //convolution_2D(image,kernel,conv,ISIZE,KSIZE);
+    
 	fir(image,kernel,acc,conv,ISIZE,KSIZE);
     //====================================================//
     gettimeofday(&t2, NULL);
