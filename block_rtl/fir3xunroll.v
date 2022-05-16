@@ -1,5 +1,5 @@
 //////// Three Times Unroll FIR Filter - 16 Tap
-//// The weights of the filter are assigned in the lines to 
+//// The weights of the filter are assigned in the lines 121 to 124
 //// Any other weights can be given here.
 //// 
 
